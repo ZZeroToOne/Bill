@@ -111,7 +111,7 @@
                 <configuration>
                     <finalName>${artifactId}</finalName>
                     <descriptors>
-                        <descriptor>src/main/assemble/distribution.xml</descriptor>
+                        <descriptor>src/main/resources/assemble/distribution.xml</descriptor>
                     </descriptors>
                 </configuration>
                 <executions>

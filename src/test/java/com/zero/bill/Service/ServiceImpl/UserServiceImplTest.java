@@ -25,7 +25,7 @@ public class UserServiceImplTest {
 
     @Test
     public void login() throws Exception {
-        System.out.println(userService.login("aaaa", "aaaaa"));
+//        System.out.println(userService.login("admin", "admin"));
     }
 
     @Test

@@ -1,38 +1,73 @@
 package com.zero.bill.bean;
 
 
+import java.io.Serializable;
+
 /**
  * 用户信息
  *
  * @author Zengzhx
  * @date 2020/4/3 4:06 PM
  */
-public class UserEntity {
+public class UserEntity implements Serializable{
 
-    private int id = 0;
-    private String name = null;
+    private int userId;
 
-    public int getId() {
-        return id;
+    private String loginName;
+
+    private String password;
+
+    private String userName;
+
+    private String email;
+
+    private String phone;
+
+    public int getUserId() {
+        return userId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
-    public String getName() {
-        return name;
+    public String getLoginName() {
+        return loginName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setLoginName(String loginName) {
+        this.loginName = loginName;
     }
 
-    @Override
-    public String toString() {
-        return "UserEntity{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 
 public interface UserDAO {
 
-    boolean login(String username, String password);
+    UserEntity login(String loginName);
 
     boolean add(UserEntity userEntity);
 

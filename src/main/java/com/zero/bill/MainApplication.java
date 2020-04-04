@@ -13,8 +13,8 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
                                     JdbcTemplateAutoConfiguration.class}
 )
 public class MainApplication extends SpringBootServletInitializer {
+
     public static void main(String[] args) {
-        UserEntity a=new UserEntity();
         SpringApplication.run(MainApplication.class, args);
     }
 

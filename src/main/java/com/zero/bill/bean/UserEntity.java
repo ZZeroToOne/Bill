@@ -21,11 +21,11 @@ public class UserEntity {
     // 驱动程序名
     String driver = "com.mysql.jdbc.Driver";
     // URL指向要访问的数据库名 test
-    String url = "jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC";
+    String url = "jdbc:mysql://121.36.140.128:3306/test?serverTimezone=UTC";
     // MySQL配置时的用户名
     String sqluser = "root";
     // MySQL配置时的密码
-    String sqlpassword = "";
+    String sqlpassword = "admin";
 
     // 遍历查询结果集
     public UserEntity() {

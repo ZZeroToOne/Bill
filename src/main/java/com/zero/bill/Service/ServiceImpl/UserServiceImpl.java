@@ -74,7 +74,7 @@ public class UserServiceImpl implements UserDAO{
 //        }
 
         String sql = "SELECT password FROM usrinfo WHERE name = :name";
-        Map<String, Object> params = new HashMap<>();
+        Map<String, Object> params = new HashMap<>(1);
         params.put("name", username);
         try {
            String pwd = jdbcTemplate.queryForObject(sql, params, String.class);

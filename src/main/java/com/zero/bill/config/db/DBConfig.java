@@ -54,6 +54,11 @@ public class DBConfig {
     @Bean
     public DruidDataSource druidDataSource() {
         DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
+        dataSource.setUrl(url);
+        dataSource.setDriverClassName(driverClassName);
+
         dataSource.setInitialSize(initialSize);
         dataSource.setMinIdle(minIdle);
         dataSource.setMaxActive(maxActive);
@@ -66,7 +71,6 @@ public class DBConfig {
         dataSource.setTestOnReturn(testOnReturn);
         dataSource.setPoolPreparedStatements(poolPreparedStatements);
         dataSource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);
-
         return dataSource;
     }
 

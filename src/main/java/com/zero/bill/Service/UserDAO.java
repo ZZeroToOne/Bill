@@ -11,12 +11,12 @@ import org.springframework.stereotype.Repository;
 
 public interface UserDAO {
 
-    void login(String username, String password);
+    boolean login(String username, String password);
 
-    void add(UserEntity userEntity);
+    boolean add(UserEntity userEntity);
 
-    void modifyUser(UserEntity userEntity);
+    boolean modifyUser(UserEntity userEntity);
 
-    void delete(long userId);
+    boolean delete(long userId);
 
 }

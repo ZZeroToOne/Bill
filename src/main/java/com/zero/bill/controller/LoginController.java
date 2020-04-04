@@ -1,5 +1,8 @@
 package com.zero.bill.controller;
 
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,9 +21,10 @@ public class LoginController extends BaseController{
      * @param request
      * @return
      */
-    @RequestMapping("/login")
-    public String login(HttpServletRequest request) {
+    @RequestMapping(value = "/login")
+    public ResponseEntity<String> login(HttpServletRequest request) {
 
-        return "";
+
+        return new ResponseEntity<String>("Hello Bill", HttpStatus.OK);
     }
 }

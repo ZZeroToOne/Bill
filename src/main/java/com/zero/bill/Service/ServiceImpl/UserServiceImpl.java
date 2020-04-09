@@ -44,6 +44,9 @@ public class UserServiceImpl implements UserDAO{
 
     @Override
     public boolean add(UserEntity userEntity) {
+        String sql = "INSERT INTO tb_user VALUES (:userId, :loginName, :passWord, :userName, :email, :phone)";
+
+
         return false;
     }
 

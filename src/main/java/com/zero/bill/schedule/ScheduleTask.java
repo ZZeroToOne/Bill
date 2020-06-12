@@ -2,6 +2,7 @@ package com.zero.bill.schedule;
 
 import cn.hutool.core.util.RandomUtil;
 import cn.hutool.json.JSONArray;
+import cn.hutool.json.JSONObject;
 import com.zero.bill.websokect.WebSocketServer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,6 +31,18 @@ public class ScheduleTask {
     @Scheduled(fixedDelay = 5000)
     public void Run() {
         logger.info("定期任务执行");
+        String product = generateProduct();
+        try
+        {
+            WebSocketServer.BroadCastInfo(product);
+        }
+        catch (IOException e)
+        {
+            logger.error("", e);
+        }
+    }
+
+    private String generateProduct() {
         // 衬衫
         int cs = RandomUtil.randomInt(10, 100);
         // 羊毛衫
@@ -50,13 +63,8 @@ public class ScheduleTask {
         jsonArray.add(kz);
         jsonArray.add(ggx);
         jsonArray.add(wz);
-
-
-        try {
-            String uuid = UUID.randomUUID().toString();
-            WebSocketServer.BroadCastInfo(jsonArray.toString());
-        } catch (IOException e) {
-            logger.error("", e);
-        }
+        JSONObject product = new JSONObject();
+        product.put("product", jsonArray);
+        return product.toString();
     }
 }
